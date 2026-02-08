@@ -1,9 +1,44 @@
-{"title": "Payments API outage", "description": "After a deploy, the payments API returned 502 errors and was unavailable for 18 minutes.", "service_name": "payments-api", "customer_impact": "high", "outage_minutes": 18, "users_impacted_percent": 65, "data_involved": "financial", "regulatory_relevance": "medium", "financial_loss_gbp": 90000, "detected_before_impact": false}
-{"title": "Latency spike on batch processing", "description": "Overnight jobs slowed with sustained latency and timeouts after a traffic spike.", "service_name": "batch-jobs", "customer_impact": "medium", "outage_minutes": 0, "users_impacted_percent": 30, "data_involved": "internal", "regulatory_relevance": "low", "financial_loss_gbp": 12000, "detected_before_impact": false}
-{"title": "Public bucket near-miss", "description": "Security scan flagged a public bucket containing internal reports; access revoked before download.", "service_name": "storage-platform", "customer_impact": "none", "outage_minutes": 0, "users_impacted_percent": 0, "data_involved": "pii", "regulatory_relevance": "high", "financial_loss_gbp": 0, "detected_before_impact": true}
-{"title": "Credential leak alert near-miss", "description": "Monitoring detected exposed credentials in a build log; tokens rotated before misuse.", "service_name": "ci-pipeline", "customer_impact": "none", "outage_minutes": 0, "users_impacted_percent": 0, "data_involved": "credentials", "regulatory_relevance": "medium", "financial_loss_gbp": 0, "detected_before_impact": true}
-{"title": "Scheduler disk full", "description": "The scheduler node ran out of disk space, causing job failures and manual restarts.", "service_name": "scheduler", "customer_impact": "low", "outage_minutes": 12, "users_impacted_percent": 15, "data_involved": "none", "regulatory_relevance": "none", "financial_loss_gbp": 5000, "detected_before_impact": false}
-{"title": "Vendor outage impacted authentication", "description": "Third-party identity provider outage caused login failures across regions.", "service_name": "auth-service", "customer_impact": "high", "outage_minutes": 45, "users_impacted_percent": 70, "data_involved": "pii", "regulatory_relevance": "medium", "financial_loss_gbp": 45000, "detected_before_impact": false}
-{"title": "Config drift caused API errors", "description": "Configuration change introduced a timeout misconfiguration, leading to 500 responses.", "service_name": "public-api", "customer_impact": "medium", "outage_minutes": 25, "users_impacted_percent": 40, "data_involved": "none", "regulatory_relevance": "none", "financial_loss_gbp": 15000, "detected_before_impact": false}
-{"title": "Runbook miss during on-call handoff", "description": "Manual error during on-call handoff delayed mitigation of a minor outage.", "service_name": "support-tools", "customer_impact": "low", "outage_minutes": 8, "users_impacted_percent": 10, "data_involved": "none", "regulatory_relevance": "none", "financial_loss_gbp": 2000, "detected_before_impact": false}
-{"title": "Data restore failed", "description": "Backup restore failed during a routine test, requiring recovery steps.", "service_name": "analytics", "customer_impact": "none", "outage_minutes": 0, "users_impacted_percent": 0, "data_involved": "internal", "regulatory_relevance": "low", "financial_loss_gbp": 0, "detected_before_impact": false}
+[
+  {
+    "id": "CTRL-001",
+    "name": "Change management approval",
+    "category": "Process",
+    "signals": ["deploy", "change", "rollback", "release"]
+  },
+  {
+    "id": "CTRL-002",
+    "name": "Capacity monitoring",
+    "category": "Technology",
+    "signals": ["latency", "timeout", "slow", "capacity"]
+  },
+  {
+    "id": "CTRL-003",
+    "name": "Secrets rotation",
+    "category": "Security",
+    "signals": ["credential", "secret", "token", "key"]
+  },
+  {
+    "id": "CTRL-004",
+    "name": "Storage alerts",
+    "category": "Technology",
+    "signals": ["disk", "storage", "filesystem", "full"]
+  },
+  {
+    "id": "CTRL-005",
+    "name": "Third-party resilience",
+    "category": "External",
+    "signals": ["vendor", "provider", "cloud", "outage"]
+  },
+  {
+    "id": "CTRL-006",
+    "name": "Access reviews",
+    "category": "Security",
+    "signals": ["access", "permission", "role", "privilege"]
+  },
+  {
+    "id": "CTRL-007",
+    "name": "Backups and recovery",
+    "category": "Technology",
+    "signals": ["backup", "restore", "recovery", "data loss"]
+  }
+]
