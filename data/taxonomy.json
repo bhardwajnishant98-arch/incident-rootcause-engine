@@ -1,0 +1,49 @@
+{
+  "classification_labels": ["ISSUE", "INCIDENT", "NEAR_MISS"],
+  "severity_labels": ["SEV1", "SEV2", "SEV3", "SEV4"],
+  "scoring": {
+    "customer_impact": {
+      "none": 0,
+      "low": 2,
+      "medium": 5,
+      "high": 8
+    },
+    "outage_minutes": {
+      "none": 0,
+      "short": 2,
+      "moderate": 5,
+      "long": 8
+    },
+    "users_impacted_percent": {
+      "none": 0,
+      "small": 2,
+      "moderate": 4,
+      "large": 7
+    },
+    "data_involved": {
+      "none": 0,
+      "internal": 2,
+      "pii": 6,
+      "financial": 7,
+      "credentials": 8
+    },
+    "regulatory_relevance": {
+      "none": 0,
+      "low": 1,
+      "medium": 4,
+      "high": 6
+    },
+    "financial_loss_gbp": {
+      "none": 0,
+      "low": 2,
+      "medium": 5,
+      "high": 8
+    }
+  },
+  "severity_thresholds": [
+    {"label": "SEV1", "min_score": 22},
+    {"label": "SEV2", "min_score": 14},
+    {"label": "SEV3", "min_score": 7},
+    {"label": "SEV4", "min_score": 0}
+  ]
+}

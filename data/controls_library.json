@@ -1,0 +1,44 @@
+[
+  {
+    "id": "CTRL-001",
+    "name": "Change management approval",
+    "category": "Process",
+    "signals": ["deploy", "change", "rollback", "release"]
+  },
+  {
+    "id": "CTRL-002",
+    "name": "Capacity monitoring",
+    "category": "Technology",
+    "signals": ["latency", "timeout", "slow", "capacity"]
+  },
+  {
+    "id": "CTRL-003",
+    "name": "Secrets rotation",
+    "category": "Security",
+    "signals": ["credential", "secret", "token", "key"]
+  },
+  {
+    "id": "CTRL-004",
+    "name": "Storage alerts",
+    "category": "Technology",
+    "signals": ["disk", "storage", "filesystem", "full"]
+  },
+  {
+    "id": "CTRL-005",
+    "name": "Third-party resilience",
+    "category": "External",
+    "signals": ["vendor", "provider", "cloud", "outage"]
+  },
+  {
+    "id": "CTRL-006",
+    "name": "Access reviews",
+    "category": "Security",
+    "signals": ["access", "permission", "role", "privilege"]
+  },
+  {
+    "id": "CTRL-007",
+    "name": "Backups and recovery",
+    "category": "Technology",
+    "signals": ["backup", "restore", "recovery", "data loss"]
+  }
+]
