@@ -1,0 +1,19 @@
+[project]
+name = "incident-rootcause-engine"
+version = "0.1.0"
+description = "Incident Root Cause Analysis Engine scaffold"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "pydantic",
+  "pyyaml",
+  "python-dotenv",
+  "fastapi",
+  "uvicorn",
+  "streamlit",
+  "pytest",
+]
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
